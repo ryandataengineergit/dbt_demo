@@ -1,0 +1,13 @@
+jaffle_shop:
+  outputs:
+    dev:
+      account: ewdutwy-bjb59429
+      database: DBT_Demo
+      password: "{{ env_var('DBT_PASSWORD') }}"
+      role: accountadmin
+      schema: jaffle_shop
+      threads: 6
+      type: snowflake
+      user: "{{ env_var('DBT_USER') }}"
+      warehouse: DEMO_WH
+  target: dev
